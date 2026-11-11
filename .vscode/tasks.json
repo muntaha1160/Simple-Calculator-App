@@ -1,0 +1,46 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build backend (g++)",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++14",
+                "-O2",
+                "-Wall",
+                "backend/server.cpp",
+                "-o",
+                "build/calculator-server.exe",
+                "-lws2_32"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compiles the C++ server into build/calculator-server.exe"
+        },
+        {
+            "label": "Build & Run Calculator (opens browser)",
+            "type": "shell",
+            "command": "build\\calculator-server.exe",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn": ["Build backend (g++)"],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "dedicated",
+                "clear": true
+            },
+            "detail": "Builds the C++ server, starts it, and opens the calculator in your browser"
+        }
+    ]
+}

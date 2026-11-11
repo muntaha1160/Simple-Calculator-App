@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator — C++ Backend</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2338bdf8'/><text x='50' y='66' font-size='40' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>C++</text></svg>" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="page">
+        <header class="topbar">
+            <div class="brand">Calculator</div>
+            <div class="badge">C++ backend</div>
+        </header>
+
+        <main class="calculator">
+            <section class="display" aria-live="polite">
+                <div class="history" id="history">&nbsp;</div>
+                <div class="current" id="display">0</div>
+            </section>
+
+            <p class="status" id="status"></p>
+
+            <section class="keys">
+                <button class="key util" data-action="clear" title="Clear everything (Esc)">C</button>
+                <button class="key" data-key="(" title="Open parenthesis">(</button>
+                <button class="key" data-key=")" title="Close parenthesis">)</button>
+                <button class="key util" data-action="delete" title="Delete last character (Backspace)">DEL</button>
+
+                <button class="key" data-key="7">7</button>
+                <button class="key" data-key="8">8</button>
+                <button class="key" data-key="9">9</button>
+                <button class="key op" data-key="/" title="Divide">&divide;</button>
+
+                <button class="key" data-key="4">4</button>
+                <button class="key" data-key="5">5</button>
+                <button class="key" data-key="6">6</button>
+                <button class="key op" data-key="*" title="Multiply">&times;</button>
+
+                <button class="key" data-key="1">1</button>
+                <button class="key" data-key="2">2</button>
+                <button class="key" data-key="3">3</button>
+                <button class="key op" data-key="-" title="Subtract">&minus;</button>
+
+                <button class="key" data-key="0">0</button>
+                <button class="key" data-key=".">.</button>
+                <button class="key op" data-key="+" title="Add">+</button>
+                <button class="key op" data-key="^" title="Power (x to the y)">x<sup>y</sup></button>
+
+                <button class="key op" data-key="%" title="Modulo (remainder)">mod</button>
+                <button class="key util" data-action="negate" title="Toggle sign">&plusmn;</button>
+                <button class="key equals" data-action="equals" title="Calculate (Enter)">=</button>
+            </section>
+
+            <footer class="footnote">
+                Frontend: HTML &middot; CSS &middot; JavaScript &nbsp;|&nbsp; Math engine: C++ &nbsp;|&nbsp; <span id="serverStatus">checking server…</span>
+            </footer>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

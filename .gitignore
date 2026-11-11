@@ -1,0 +1,13 @@
+# Build outputs (keep the empty build folder in the repo)
+build/*
+!build/.gitkeep
+*.exe
+*.obj
+*.o
+
+# Logs
+*.log
+
+# OS junk
+Thumbs.db
+Desktop.ini
